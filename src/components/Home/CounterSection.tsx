@@ -50,7 +50,7 @@ const FactCounterArea = () => {
   ];
 
   return (
-    <section className="py-5 rounded-4xl bg-indigo-900 max-w-[1300px] mx-auto">
+    <section className="py-5 rounded-4xl bg-[#393d72] max-w-[1300px] mx-auto">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap -mx-4">
           {counters.map((counter, index) => (

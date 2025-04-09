@@ -1,8 +1,10 @@
 
+import FooterComponent from '@/components/Footer/FooterComponent';
 import AboutUsSection from '@/components/Home/AboutUsSection';
 import AppSection from '@/components/Home/AppSection';
 import BlogSection from '@/components/Home/BlogSection';
 import FactCounterArea from '@/components/Home/CounterSection';
+import Faq from '@/components/Home/Faq';
 import FeaturedArea from '@/components/Home/FeaturedArea';
 import HeroSection from '@/components/Home/HeroSection';
 import LogoMarquee from '@/components/Home/LogoMarquee';
@@ -28,6 +30,8 @@ const Homepage = () => {
             <WhyChooseUsSection/>
             <BlogSection/>
             <LogoMarquee/>
+            <Faq/>
+            <FooterComponent/>
         </div>
     );
 };

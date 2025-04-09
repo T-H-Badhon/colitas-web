@@ -8,9 +8,9 @@ const AppSection = () => {
             <div>
                 <Image src={'/assets/frontend/images/resources/phone-6.webp'} width={600} height={1200} alt='app image' className='w-full aspect-auto' />
             </div>
-            <h1 className='text-center'>Colitas App</h1>
-            <h1 className='text-center'>All-in-One App</h1>
-            <h1 className='text-center'>All the services you need in one place, creating an ecosystem where all actors can interact through Colitas App</h1>
+            <h1 className='text-center font-bold'>COLITAS app</h1>
+            <h1 className='text-center font-extrabold text-4xl my-5'>All-in-one App</h1>
+            <h1 className='text-center text-lg'><span className='text-blue-500 font-bold'>All the services</span> you need <span className='text-blue-500 font-bold'>in one place</span>, creating an ecosystem where <span className='text-blue-500 font-bold'>all actors</span> can <span className='text-blue-500 font-bold'>interact</span> through Colitas App</h1>
             <div className='flex items-center justify-center gap-5 mt-5'>
                 <Image src={'/assets/frontend/images/resources/google-play.webp'} width={600} height={300} alt='app image' className='w-[200px] aspect-auto rounded-lg' />
                 <Image src={"/assets/frontend/images/resources/app-store.webp"} width={600} height={300} alt='app image' className='w-[200px] aspect-auto rounded-lg' />

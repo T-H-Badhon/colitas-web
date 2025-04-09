@@ -8,7 +8,7 @@ const VideoSection = () => {
     const [showVideo, setShowVideo] =useState(false);
     return (
         <div className='relative my-14'>
-            <div className=' bg-orange-500 px-28 brightness-50'>
+            <div className=' bg-orange-400 px-28 brightness-75'>
                 <Image src={"/assets/frontend/images/resources/video-gallery-bg.jpg"} alt="Video Background" width={2000} height={1000} className='w-full max-h-[720px] object-cover' />    
             </div>
 

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { IoPricetagsOutline } from "react-icons/io5";
 
 const blogs = [
   {
@@ -32,17 +33,17 @@ const BlogSection = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <div>
-            <h5 className="text-gray-500 text-lg font-semibold">
-              {"//"} <span className="text-black">Blog</span> {"//"}
+            <h5 className="text-orange-400 text-lg font-bold">
+              {"//"} <span className="mx-2">Blog</span> {"//"}
             </h5>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 flex items-center gap-2">
+            <h2 className="text-3xl md:text-6xl font-bold text-[#393d72] flex items-center gap-2">
               News & Feed
-              <span className="inline-block w-4 h-4 bg-orange-500 rounded-full animate-pulse" />
+              <span className="inline-block w-2 h-2  bg-orange-500 rounded-full animate-ping relative top-4" />
             </h2>
           </div>
           <a
             href="/blog.html"
-            className="text-sm mt-4 md:mt-0 text-blue-600 font-semibold hover:underline flex items-center gap-1"
+            className="text-sm mt-4 md:mt-0 text-[#393d72] font-semibold hover:underline flex items-center gap-1"
           >
             View all <span className="ml-1">→</span>
           </a>
@@ -65,22 +66,23 @@ const BlogSection = () => {
                 />
               </div>
               <div className="p-4">
-                <ul className="text-sm text-gray-500 flex flex-wrap gap-3 mb-2">
+                <ul className="text-sm text-[#393d72] flex flex-wrap gap-3 mb-2">
                   <li>
-                    <span className="font-medium">By {blog.author}</span>
+                    <span className="font-bold hover:text-orange-400">By {blog.author}</span>
                   </li>
-                  <li>
+                  <li className="flex items-center gap-2">
+                    <IoPricetagsOutline  className="text-orange-400"/>
                     {blog.tags.map((tag, i) => (
-                      <span key={i} className="mr-2">
-                        #{tag}
+                      <span key={i} className="font-bold hover:text-orange-400">
+                        {tag} <span className={`${i+1 == blog.tags?.length? "hidden":""}`}>,</span>
                       </span>
                     ))}
                   </li>
                 </ul>
                 <h3 className="text-lg font-semibold text-gray-800 leading-snug">
-                  <a href={blog.link} className="hover:text-blue-600 transition-all">
-                    {blog.title}
-                    <span className="inline-block w-2 h-2 bg-pink-500 rounded-full ml-1 animate-pulse" />
+                  <a href={blog.link} className="hover:text-orange-400 transition-all">
+                    {blog.title}...
+                    <span className="inline-block w-2 h-2 bg-orange-500 rounded-full ml-1 animate-pulse" />
                   </a>
                 </h3>
               </div>
