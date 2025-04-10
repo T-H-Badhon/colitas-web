@@ -20,7 +20,7 @@ const HeroSection = () => {
         
         <div className="flex-1 my-10 flex flex-col justify-center items-center gap-4">
           <h2 className="text-3xl md:text-5xl font-bold text-white">
-            Contact Us
+            News Feeds
             <span className="inline-block w-4 h-4 bg-green-300 rounded-full ml-2"></span>
           </h2>
 
@@ -29,7 +29,7 @@ const HeroSection = () => {
 
             <div className="border-e-[3px] border-white h-4"></div>
 
-            <h2 className="font-bold text-lg text-orange-400 pl-2">Contact</h2>
+            <h2 className="font-bold text-lg text-orange-400 pl-2">Blog</h2>
           </div>
         </div>
 

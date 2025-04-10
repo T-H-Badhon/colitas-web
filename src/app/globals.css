@@ -20,3 +20,9 @@
 .card-shadow-full {
   box-shadow: 0 0 8px #e2e1e1;
 }
+
+.remove-default {
+  -webkit-appearance: none;  /* For Safari */
+  -moz-appearance: none;     /* For Firefox */
+  appearance: none;          /* Standard syntax */      /* Optional: Space for custom arrow */
+}

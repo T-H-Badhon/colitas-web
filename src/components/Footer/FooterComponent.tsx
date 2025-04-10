@@ -22,26 +22,26 @@ const FooterComponent = () => {
               />
             </div>
             <div className="flex items-center gap-5">
-              <Link
-                href={"#"}
+              <Link target="_blank"
+                href={"https://www.facebook.com/colitascare"}
                 className="w-12 h-12 bg-[#3B5999] rounded-lg flex items-center justify-center"
               >
                 <FaFacebookF className="text-white text-2xl" />
               </Link>
-              <Link
-                href={"#"}
-                className="w-12 h-12 bg-[#F20186] rounded-lg flex items-center justify-center"
+              <Link target="_blank"
+                href={"https://www.instagram.com/colitascare/"}
+                className="w-12 h-12 bg-gradient-to-r from-[#f58529] via-[#dd2a7b] to-[#8134af] rounded-lg flex items-center justify-center"
               >
                 <FaInstagram className="text-white text-2xl" />
               </Link>
-              <Link
-                href={"#"}
+              <Link target="_blank"
+                href={"https://www.tiktok.com/@colitascare"}
                 className="w-12 h-12 bg-[#55ACEE] rounded-lg flex items-center justify-center"
               >
                 <FaTiktok className="text-white text-2xl" />
               </Link>
-              <Link
-                href={"#"}
+              <Link target="_blank"
+                href={"https://www.youtube.com/channel/UCGnccMPPqX-0uiT9VW5l5Ew"}
                 className="w-12 h-12 bg-[#CD201F] rounded-lg flex items-center justify-center"
               >
                 <FaYoutube className="text-white text-2xl" />
@@ -49,7 +49,7 @@ const FooterComponent = () => {
             </div>
           </div>
 
-          <hr className="border-white my-7" />
+          <hr className="border-gray-500 my-7" />
 
           <div className="grid md:grid-cols-3 gap-10 py-10 px-4 text-white">
             <div className="flex flex-col gap-5 items-center justify-center">
@@ -65,7 +65,7 @@ const FooterComponent = () => {
               </div>
               <div>
                 <Link
-                  href="/"
+                  href="/the-app"
                   className="text-gray-400 hover:text-white font-semibold text-lg"
                 >
                   The App
@@ -73,7 +73,7 @@ const FooterComponent = () => {
               </div>
               <div>
                 <Link
-                  href="/"
+                  href="/blog"
                   className="text-gray-400 hover:text-white font-semibold text-lg"
                 >
                   Blog
@@ -81,7 +81,7 @@ const FooterComponent = () => {
               </div>
               <div>
                 <Link
-                  href="/"
+                  href="/contact"
                   className="text-gray-400 hover:text-white font-semibold text-lg"
                 >
                   Contact Us
@@ -89,7 +89,7 @@ const FooterComponent = () => {
               </div>
               <div>
                 <Link
-                  href="/"
+                  href="/terms"
                   className="text-gray-400 hover:text-white font-semibold text-lg"
                 >
                   Terms & Conditions

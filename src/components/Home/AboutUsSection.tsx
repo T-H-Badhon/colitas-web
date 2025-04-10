@@ -14,7 +14,7 @@ const AboutUsSection = () => {
                   <span className="mx-3">About Us</span> {"//"}
                 </h5>
                   <h2 className="text-3xl md:text-7xl font-bold text-[#393d72]  px-0 mx-0">
-                    Colitas Mission and Key Focus <span className="rounded-full  text-xs aspect-square bg-orange-500 animate-ping "><span className="invisible">gg</span></span>
+                    Colitas Mission And Key Focus <span className="rounded-full  text-xs aspect-square bg-orange-500 animate-ping "><span className="invisible">gg</span></span>
                   </h2>
               </div>
               <div className="text-gray-700 text-base leading-relaxed">
@@ -32,7 +32,7 @@ const AboutUsSection = () => {
               <div className="text-center ">
                 <a
                   href="lang/es.html#"
-                  className="flex items-center mx-auto gap-3 w-fit bg-lime-500 hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition duration-300"
+                  className="flex items-center mx-auto gap-5 w-fit bg-lime-500 hover:bg-orange-400/90 text-white font-bold px-10 py-3 rounded-xl transition duration-300"
                 >
                   <FaPhoneAlt/>
                   Contact Us

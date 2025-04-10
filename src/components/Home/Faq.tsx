@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Collapsible from "react-collapsible";
 
@@ -26,8 +26,8 @@ const Faq = () => {
     },
   ];
   return (
-    <div className="my-14 max-w-[580px] mx-auto">
-      <div className="mb-5">
+    <div className="my-14 max-w-[580px] mx-auto pb-10">
+      <div className="mb-14">
         <h5 className="text-orange-400 text-lg font-bold">
           {"//"} <span className="mx-2">faq</span> {"//"}
         </h5>
@@ -36,32 +36,32 @@ const Faq = () => {
         </h2>
       </div>
 
-      {faqs.map((faq, index) => {
-        return (
-          <Collapsible
-            key={index}
-            trigger={
-              <div className="flex items-center gap-4 mt-5 cursor-pointer">
-                <div className="text-3xl w-10  h-10 bg-gray-400/30 rounded-lg flex items-center justify-center ">
-                  <button className="text-orange-400 relative -top-[4px]">
-                    +
-                  </button>
-                </div>
+      <div className="space-y-10">
+        {faqs.map((faq, index) => {
+          return (
+            <Collapsible
+              key={index}
+              trigger={
+                <div className="flex items-center gap-4 mt-5 cursor-pointer">
+                  <div className="text-3xl w-10  h-10 bg-gray-400/30 rounded-lg flex items-center justify-center ">
+                    <button className="text-orange-400 relative -top-[4px]">
+                      +
+                    </button>
+                  </div>
 
-                <h2 className="text-2xl font-bold text-[#393d72]">
-                  {faq.title}
-                </h2>
+                  <h2 className="text-2xl font-bold text-[#393d72]">
+                    {faq.title}
+                  </h2>
+                </div>
+              }
+            >
+              <div className=" pl-2 my-2 space-y-2 text-justify">
+                <p>{faq.value}</p>
               </div>
-            }
-          >
-            <div className=" pl-2 my-2 space-y-2 text-justify">
-              <p>
-                {faq.value}
-              </p>
-            </div>
-          </Collapsible>
-        );
-      })}
+            </Collapsible>
+          );
+        })}
+      </div>
     </div>
   );
 };

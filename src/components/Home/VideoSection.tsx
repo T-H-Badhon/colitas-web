@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { FaPlay } from 'react-icons/fa6';
+import { RxCross1 } from 'react-icons/rx';
 
 const VideoSection = () => {
 
@@ -17,8 +18,9 @@ const VideoSection = () => {
                 <button onClick={()=>{setShowVideo(true)}} className={`w-[100px] h-[100px] bg-white rounded-full items-center justify-center shadow-lg ${showVideo? 'hidden': "flex"}`}>
                     <FaPlay className='text-2xl' /> 
                 </button>
-                <div className={`${showVideo? 'flex': "hidden"}`}>
-                    <video className='w-full max-w-[680px] h-full object-cover' controls>
+                <div className={`${showVideo? 'flex': "hidden"} fixed z-[99999] top-0 w-[100vw] h-[100vh] bg-black/50 items-center justify-center`}>
+                    <button onClick={()=>{setShowVideo(false)}} className='absolute top-5 right-5 text-white text-2xl cursor-pointer'><RxCross1/></button>
+                    <video className='w-full max-w-[680px] h-fit object-cover' controls>
                         <source src="/assets/frontend/videos/colitas.mp4" type="video/mp4" />
                     </video>
                 </div>

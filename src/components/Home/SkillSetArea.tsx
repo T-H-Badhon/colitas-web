@@ -47,10 +47,10 @@ const CircularProgress = ({ lastValue = 0, color = "#000", title = "", descripti
           cy={radius}
         />
       </svg>
-      <div className="text-7xl text-[#393d72] absolute flex items-center font-extrabold"><h2 className="-top-5 relative">{value}<span className="text-lg">%</span></h2></div>
+      <div className="text-7xl text-[#393d72] absolute flex items-center font-extrabold"><h2 className="-top-8 relative">{value}<span className="text-lg">%</span></h2></div>
       <div className="text-center">
-        <h2 className="text-xl font-bold text-[#393d72]">{title}</h2>
-        <p className="text-sm text-[#393d72] font-semibold">{description}</p>
+        <h2 className="text-3xl font-bold text-[#393d72] mb-3">{title}</h2>
+        <p className="text-[#393d72] font-semibold">{description}</p>
       </div>
     </div>
   );

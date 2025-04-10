@@ -1,7 +1,14 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { useState } from "react"
+import type React from "react";
+import { useState } from "react";
+import { FaRegUser } from "react-icons/fa";
+import { IoIosSend } from "react-icons/io";
+import { countries } from "../../../const/countryList";
+import { FaArrowDownLong } from "react-icons/fa6";
+import { MdMailOutline } from "react-icons/md";
+import { FiPhone } from "react-icons/fi";
+import { GoPencil } from "react-icons/go";
 
 export default function FormComponent() {
   const [formData, setFormData] = useState({
@@ -11,163 +18,111 @@ export default function FormComponent() {
     phone: "",
     subject: "",
     message: "",
-  })
+  });
 
-  const [isCountryDropdownOpen, setIsCountryDropdownOpen] = useState(false)
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
-
-  const handleCountrySelect = (country: string) => {
-    setFormData((prev) => ({ ...prev, country }))
-    setIsCountryDropdownOpen(false)
-  }
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("Form submitted:", formData)
+    e.preventDefault();
+    console.log("Form submitted:", formData);
     // Here you would typically send the data to your backend
-  }
+  };
 
   // Shortened country list for brevity
-  const countries = [
-    "Afghanistan",
-    "Albania",
-    "Algeria",
-    "United States",
-    "United Kingdom",
-    "Canada",
-    "Australia",
-    "Germany",
-    "France",
-    "Japan",
-    "China",
-    "India",
-    "Brazil",
-  ]
 
   return (
-    <section className="py-12 relative">
-      <div className="absolute inset-0 bg-[url('/placeholder.svg?height=600&width=1200')] opacity-5 bg-no-repeat bg-cover"></div>
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-10">
-          <p className="text-sm font-medium text-purple-600 mb-2">
-            {"//"}
-            <span className="mx-2">Contact Us</span> {"//"}
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Get In Touch
-            <span className="inline-block w-2 h-2 bg-purple-600 rounded-full ml-2 animate-pulse"></span>
-          </h2>
-        </div>
+    <div className=" mx-auto xl:w-[1100px]">
+      <div className="text-center mb-10">
+        <p className="text-lg font-medium text-orange-400 mb-2">
+          {"//"}
+          <span className="mx-2">Contact Us</span> {"//"}
+        </p>
+        <h2 className="text-3xl md:text-5xl font-extrabold text-[#393D72]">
+          Get In Touch
+          <span className="inline-block w-2 h-2 bg-orange-400 rounded-full ml-2 animate-ping"></span>
+        </h2>
+      </div>
 
-        <div className="max-w-4xl mx-auto">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="relative">
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Your name"
-                  className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  required
-                />
-                {/* <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" /> */}
-              </div>
-
-              <div className="relative">
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Email address"
-                  className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  required
-                />
-                {/* <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" /> */}
-              </div>
-
-              <div className="relative">
-                <div
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md flex items-center justify-between cursor-pointer"
-                  onClick={() => setIsCountryDropdownOpen(!isCountryDropdownOpen)}
-                >
-                  <span className={formData.country ? "text-black" : "text-gray-500"}>
-                    {formData.country || "Select Country"}
-                  </span>
-                  {/* <ChevronDown className="h-4 w-4 text-gray-400" /> */}
-                </div>
-
-                {isCountryDropdownOpen && (
-                  <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg max-h-60 overflow-y-auto">
-                    {countries.map((country) => (
-                      <div
-                        key={country}
-                        className="px-4 py-2 hover:bg-purple-50 cursor-pointer"
-                        onClick={() => handleCountrySelect(country)}
-                      >
-                        {country}
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
+      <div className="max-w-[1400px] mx-auto">
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="flex bg-white py-3 px-6 items-center rounded-lg mt-5">
+              <input
+                type="text"
+                placeholder="Your name"
+                className="text-black placeholder:text-black flex-1 focus:outline-0"
+              />
+              <FaRegUser className="text-orange-400" />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="relative">
-                <input
-                  type="text"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder="Phone number"
-                  className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                />
-                {/* <Phone className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" /> */}
-              </div>
-
-              <div className="relative">
-                <input
-                  type="text"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  placeholder="Subject"
-                  className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                />
-                {/* <Pen className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" /> */}
-              </div>
+            <div className="flex bg-white py-3 px-6 items-center rounded-lg mt-5">
+              <input
+                type="text"
+                placeholder="Email address"
+                className="text-black placeholder:text-black flex-1 focus:outline-0"
+              />
+              <MdMailOutline className="text-orange-400" />
             </div>
 
-            <div>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Write message"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent min-h-[150px] resize-y"
-                required
-              ></textarea>
+            <div className="flex bg-white py-3 px-6 items-center rounded-lg mt-5">
+              <select className="flex-1 focus:outline-0 w-full remove-default">
+                <option value="">Select Country</option>
+                {countries?.map((country) => (
+                  <option key={country.value} value={country.value}>
+                    {country.name}
+                  </option>
+                ))}
+              </select>
+              <div ><FaArrowDownLong className="text-orange-400"/></div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="flex bg-white py-3 px-6 items-center rounded-lg mt-5">
+              <input
+                type="text"
+                placeholder="Phone number"
+                className="text-black placeholder:text-black flex-1 focus:outline-0"
+              />
+              <FiPhone className="text-orange-400" />
             </div>
 
-            <div className="text-center">
-              <button
-                type="submit"
-                className="px-6 py-2 bg-gradient-to-r from-purple-500 to-purple-700 text-white rounded-md hover:from-purple-600 hover:to-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition-colors duration-200 flex items-center justify-center mx-auto"
-              >
-                {/* <Send className="mr-2 h-4 w-4" /> */}
-                Submit Now
+            <div className="flex bg-white py-3 px-6 items-center rounded-lg mt-5">
+              <input
+                type="text"
+                placeholder="Subject"
+                className="text-black placeholder:text-black flex-1 focus:outline-0"
+              />
+              <GoPencil className="text-orange-400" />
+            </div>
+          </div>
+
+          <div>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Write message"
+              className="w-full px-4 py-2 bg-white border border-gray-300 rounded-md   min-h-[150px] resize-y text-black placeholder:text-black "
+              required
+            ></textarea>
+          </div>
+
+          <div className="text-center">
+            <div className="mx-auto w-fit">
+              <button className="flex item-center justify-center px-4 py-3 bg-orange-400 text-white font-bold rounded-lg gap-2 mt-5 w-fit">
+                <IoIosSend className="text-2xl" />
+                <p>Submit Now</p>
               </button>
             </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
-    </section>
-  )
+    </div>
+  );
 }

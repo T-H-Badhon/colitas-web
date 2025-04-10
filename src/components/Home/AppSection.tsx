@@ -3,7 +3,7 @@ import React from 'react';
 
 const AppSection = () => {
     return (
-        <div className='max-w-[570px] mx-auto'>
+        <div className='max-w-[570px] mx-auto px-5 pb-8'>
             
             <div>
                 <Image src={'/assets/frontend/images/resources/phone-6.webp'} width={600} height={1200} alt='app image' className='w-full aspect-auto' />

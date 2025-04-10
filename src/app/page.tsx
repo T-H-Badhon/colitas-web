@@ -1,5 +1,4 @@
 
-import FooterComponent from '@/components/Footer/FooterComponent';
 import AboutUsSection from '@/components/Home/AboutUsSection';
 import AppSection from '@/components/Home/AppSection';
 import BlogSection from '@/components/Home/BlogSection';
@@ -31,7 +30,6 @@ const Homepage = () => {
             <BlogSection/>
             <LogoMarquee/>
             <Faq/>
-            <FooterComponent/>
         </div>
     );
 };
